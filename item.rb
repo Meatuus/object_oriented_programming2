@@ -1,6 +1,6 @@
 class Item
 
-	attr_accessor :type, :name, :origin, :cost, :quantity, :subtotal, :tax
+	attr_accessor :type, :name, :origin, :cost, :quantity, :tax
 
 	def initialize(type, name, origin, cost, quantity)
 		@type     = type
@@ -9,8 +9,7 @@ class Item
 		@cost     = cost * quantity
 		@quantity = quantity
 
-		subtotal
-		tax
+		@tax = 0
 	end
 
 	def tax #calculates tax on purchase
