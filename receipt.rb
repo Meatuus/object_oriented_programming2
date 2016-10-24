@@ -22,7 +22,6 @@ class Receipt
 		tax_total = 0
 		@shopping_bag.each do |add|
 			tax_total += add.tax
-			tax_total.round(2)
 		end
 		tax_total
 	end
@@ -33,12 +32,12 @@ class Receipt
 
 	def print_receipt
 		puts "RECEIPT:"
-		shopping_bag.each do |y|
-			puts "#{y.quantity} - #{y.name}:  $#{'%.2f' % y.cost}"
+		shopping_bag.each do |print|
+			puts "#{print.quantity} - #{print.name}:  $#{'%.2f' % print.cost}"
 		end
 		puts "Sub-Total : $#{'%.2f' % sub_total}"
 		puts "Tax       : $#{'%.2f' % tax_total}"
 		puts "Total     : $#{'%.2f' % total}"
 	end
-	
+
 end

@@ -23,5 +23,9 @@ class Item
 			tax = @cost * 0.15
 		end
 	end
+	#
+	# def subtotal
+	# 	sub = @cost * @quantity
+	# end
 
 end
